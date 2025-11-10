@@ -11,7 +11,13 @@ public class Diamond {
     if (diamondSize % 2 == 0){
 
       for (int i = 0; i <= mid ; i++){
-        int stars = 2 * i;
+        int stars;
+    
+        if (i == 0){
+          stars = 2 * i + 1;
+        } else {
+          stars = 2 * i;
+        }
         int spaces = (diamondSize - stars) / 2;
           for (int s = 0; s < spaces; s++){
             System.out.print(" ");
@@ -22,8 +28,14 @@ public class Diamond {
           System.out.println();
       }
       for (int i = mid - 1; i > 0; i--){
-        int stars = 2 * i;
-        int spaces = (diamondSize - stars) / 2;
+        int stars;
+        
+        if (i == diamondSize){
+          stars = 1;
+        } else {
+          stars = 2 * i;
+        }
+          int spaces = (diamondSize - stars) / 2;
           for (int s = 0; s < spaces; s++) {
              System.out.print(" ");
           }
