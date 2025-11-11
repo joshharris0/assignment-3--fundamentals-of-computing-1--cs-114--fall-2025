@@ -7,12 +7,12 @@ public class Diamond {
     int diamondSize = scan.nextInt();
     System.out.println(diamondSize);
     int mid = diamondSize / 2;
-
+    scan.close();
     if (diamondSize % 2 == 0){
 
       for (int i = 0; i <= mid ; i++){
         int stars;
-    
+
         if (i == 0){
           stars = 2 * i + 1;
         } else {
@@ -29,7 +29,7 @@ public class Diamond {
       }
       for (int i = mid - 1; i > 0; i--){
         int stars;
-        
+
         if (i == diamondSize){
           stars = 1;
         } else {
