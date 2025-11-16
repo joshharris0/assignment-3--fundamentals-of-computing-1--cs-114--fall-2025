@@ -41,6 +41,11 @@ public class Matrix {
   }
 
   public void flipMatrix() {
+    for (int row = 0; row < size; row++) {
+      for (int col = 0; col < size / 2; col++) {
+        swap(row, col, row, (size - 1) - col);
+      }
+    }
   }
 
 
