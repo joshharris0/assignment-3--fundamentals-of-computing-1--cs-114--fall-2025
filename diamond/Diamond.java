@@ -8,7 +8,7 @@ public class Diamond {
     System.out.println(diamondSize);
     int mid = diamondSize / 2;
     scan.close();
-    if (diamondSize % 2 == 0){
+    if (diamondSize % 2 == 0){  // even diamond
 
       for (int i = 0; i <= mid ; i++){
         int stars;
@@ -27,10 +27,10 @@ public class Diamond {
           }
           System.out.println();
       }
-      for (int i = mid - 1; i > 0; i--){
+      for (int i = mid - 1; i >= 0; i--){
         int stars;
 
-        if (i == diamondSize){
+        if (i == 0){
           stars = 1;
         } else {
           stars = 2 * i;
@@ -47,10 +47,7 @@ public class Diamond {
 
 
 
-
-
-
-    } else {
+    } else { // odd diamond
       for (int i = 0; i<=mid; i++){
         int stars = 2 * i + 1;
         int spaces = (diamondSize - stars) / 2;

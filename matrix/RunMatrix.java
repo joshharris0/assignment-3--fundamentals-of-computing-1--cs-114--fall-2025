@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class RunMatrix{
   public static void main(String[] args) {
-    Matrix matrix = new Matrix(4);
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Please enter the size of your matrix: ");
+    int size = scanner.nextInt();
+    Matrix matrix = new Matrix(size);
     matrix.printMatrix();
     System.out.println();
 

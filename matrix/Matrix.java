@@ -13,7 +13,6 @@ public class Matrix {
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < size; j++) {
         matrix[i][j] = index++;
-        // matrix[i][j] = 0;
       }
     }
   }
@@ -42,11 +41,10 @@ public class Matrix {
 
   public void flipMatrix() {
     for (int row = 0; row < size; row++) {
-      for (int col = 0; col < size / 2; col++) {
-        swap(row, col, row, (size - 1) - col);
+      for (int col = 0; col < size - 1 - row; col++) {
+        swap(row, col, size - 1 - row, size - 1 - col);
       }
     }
+
   }
-
-
 }
